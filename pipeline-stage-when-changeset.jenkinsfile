@@ -1,0 +1,16 @@
+pipeline{
+    agent none
+    options { 
+        timestamps () 
+        }
+    stages{
+        stage("Build") {
+            when {
+                changeset glob: "*.txt"
+            }
+            steps {
+                echo "Hello world changset of file with txt extention"
+            }
+        }
+    }
+}
