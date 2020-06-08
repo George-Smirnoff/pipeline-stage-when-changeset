@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage("Build") {
             when {
-                changeset glob: "*.txt"
+                changeset "*.txt"
             }
             steps {
                 echo "Hello world changset of file with txt extention"
